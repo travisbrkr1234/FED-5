@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <style>
+  html {
+    height: 100%;
+  }
+  body {
+    background: -moz-linear-gradient(45deg,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 33%,rgba(142, 28, 28, 0.65) 39%,rgba(0,0,0,0) 100%);
+    background: -webkit-linear-gradient(45deg,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 33%,rgba(142, 28, 28, 0.65) 39%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(45deg,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 33%,rgba(142, 28, 28, 0.65) 39%,rgba(0,0,0,0) 100%);
+    background-repeat: no-repeat;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 35em;
+    margin: auto;
+  }
+  input {
+    height: 3em;
+    margin: .25em;
+    padding-left: 1em;
+    border-color: rgba(175, 175, 175, 0.12);
+    border-radius: 1em;
+  }
+  .content {
+    margin-top: 12%;
+    min-width: 27.5em;
+    min-height: 35em;
+  }
+  /*Media query to center form on mobile? maybe not...*?
+  /*@media screen and (min-height: 480px) {
+  .content {
+  margin-top: 50%;
+}
+}*/
+  .rocket {
+    text-align: center; /*Hack for svgs?*/
+  }
+  .input_field {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.55);
+  }
+  .login_button {
+    background-color: rgba(255, 255, 255, 0.48);
+    font-size:18px;
+    border-radius: 10px;
+    max-width: 50%;
+    min-width: 50%;
+    margin: auto;
+    margin-top: 1em;
+  }
+  .login_button:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+</style>
+</head>
+<body>
+  <div class="content">
+    <div class="rocket">
+      <svg width="200" height="150" xmlns="http://www.w3.org/2000/svg">
+        <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+        <g>
+          <title>background</title>
+          <rect fill="url(#svg_13)" id="canvas_background" height="152" width="202" y="-1" x="-1"/>
+          <g display="none" id="canvasGrid">
+            <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%" id="svg_5"/>
+          </g>
+        </g>
+        <g>
+          <title>Rocket </title>
+          <g transform="rotate(73.21768188476562 99.45431518554689,84.8533706665039) " id="svg_8" stroke="null">
+            <ellipse ry="50.436062" rx="17.271862" id="svg_15" cy="130.264966" cx="102.350439" stroke-opacity="null" stroke-width="0" fill="#d17f47" stroke="#000"/>
+            <path id="svg_1" d="m87.169447,14.51813l14.352667,-25.512408l14.35267,25.512408l-14.35267,25.512401l-14.352667,-25.512404l0,0.000003z" stroke-width="1.5" fill="#999999" stroke="#000"/>
+            <path id="svg_2" d="m78.996935,68.250193l8.48389,-55.734787l28.279636,0l8.483886,55.734787l-45.247413,0l0.000001,0z" stroke-width="1.5" fill="#999999" stroke="#000"/>
+            <path id="svg_3" d="m124.197252,68.377525l-3.966796,-30.447165l23.321439,28.806076l-19.354643,1.641089z" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#999999" stroke="#000"/>
+            <path id="svg_4" d="m78.782006,68.41188l-23.425262,-1.986239l27.373941,-28.32186l-3.948679,30.308102l0,-0.000003z" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#999999" stroke="#000"/>
+            <ellipse ry="41.801094" rx="9.730626" id="svg_11" cy="122.022497" cx="102.107173" stroke-opacity="null" stroke-width="0" fill="#ffdd56" stroke="#000"/>
+            <ellipse ry="31.007385" rx="6.324907" id="svg_14" cy="111.228787" cx="102.107173" stroke-opacity="null" stroke-width="0" fill="#fffd95" stroke="#000"/>
+            <path fill="#999999" stroke-width="1.5" d="m82.167861,79.80437l7.389189,-11.382456l24.630633,0l7.389185,11.382456l-39.409007,0z" id="svg_10" stroke="#000"/>
+            <path fill="#d17f47" stroke-width="0" stroke-opacity="null" fill-opacity="null" d="m115.703759,40.678844c0,5.644632 -11.435938,10.220514 -25.542873,10.220514l0,8.176415l0,0c14.106934,0 25.542873,-4.575882 25.542873,-10.220518l0,-8.176412c0,-4.660542 -7.879506,-8.730839 -19.157151,-9.895972l0,-4.088209l-6.385718,7.851869l6.385718,8.500957l0,-4.088206l0,0c7.604599,0.785657 13.883107,2.927492 17.024709,5.807767" id="svg_19" stroke="#000"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div id="login_form">
+      <form name="f1" method="post" action="http://www.example.com/foo" id="f1">
+        <input type="text" name="username" value="" placeholder="Username" class="input_field" required="required" />
+        <input type="password" name="password" value="" placeholder="Password" class="input_field" required="required"  />
+        <input type="submit" name="login" value="Login" class="login_button"/>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
